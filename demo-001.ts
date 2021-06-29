@@ -39,7 +39,32 @@
 // console.log(`tsIsbad:`, tsIsbad);
 
 // 4.0 Symbol
-let sym1: symbol = Symbol();
-console.log(`sym1`, sym1);
-let sym2: symbol = Symbol(123);
-console.log(`sym2`, sym2);
+// let sym1: symbol = Symbol();
+// console.log(`sym1`, sym1);
+// let sym2: symbol = Symbol(123);
+// console.log(`sym2`, sym2);
+
+// 5.0 TypeScript 还包含 Number、String、Boolean、Symbol 等类型（注意区分大小写）
+// let sym1: Symbol = Symbol('b');
+// let sym2: symbol = Symbol('a');
+// sym1 = sym2; // ok
+// console.log(`sym1`, sym1);
+// // sym2 = sym1; // fail 不能将类型“Symbol”分配给类型“symbol”, “symbol”是基元，但“Symbol”是包装器对象。如可能首选使用“symbol”
+
+// let str1: String = new String('a');
+// let str2: string = 'a';
+// str1 = str2; // ok
+// console.log(`str1:`, str1);
+// // str2 = str1; // fail 不能将类型“String”分配给类型“string”, “string”是基元，但“String”是包装器对象。如可能首选使用“string”
+
+// 6.0
+// {
+//   let mustBeNum = '111';
+//   console.log(`mustBeNum:`, mustBeNum)
+// }
+// {
+//   let mustBeNum: number = '111'; // 不能将类型“"111"”分配给类型“number”。
+//   console.log(`mustBeNum:`, mustBeNum)
+// }
+
+// 7.0
