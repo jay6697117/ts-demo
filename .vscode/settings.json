@@ -1,4 +1,4 @@
 {
-  "typescript.tsdk": "/Users/zhangjinhui/.nvm/versions/node/v12.22.1/lib/node_modules/typescript/lib"
-  // "typescript.tsdk": "/Users/yuantingting/.nvm/versions/node/v12.18.3/lib/node_modules/typescript/lib"
+  // "typescript.tsdk": "/Users/zhangjinhui/.nvm/versions/node/v12.22.1/lib/node_modules/typescript/lib"
+  "typescript.tsdk": "/Users/yuantingting/.nvm/versions/node/v12.18.3/lib/node_modules/typescript/lib"
 }
