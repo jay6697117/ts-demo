@@ -1,8 +1,5 @@
-# ts-atguigu
-尚硅谷超哥TS教程
+# ts-demo
+拉钩教育 乾元大佬的 TS课程
 
-### 学习源码地址:
-- https://github.com/JasonkayZK/typescript_learn
-
-### 哔哩哔哩学习进度: p14
-https://www.bilibili.com/video/BV1Xy4y1v7S2?p=14
+## 课程地址:
+- https://kaiwu.lagou.com/course/courseInfo.htm?courseId=885#/content

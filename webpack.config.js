@@ -1,9 +1,10 @@
 // 引入一个包
 const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin'); //插件
+const { CleanWebpackPlugin } = require('clean-webpack-plugin'); //插件
 const rootDir = process.cwd(); // 项目根目录
 
+//查看环境变量
 console.log(`process.env.NODE_ENV:`, process.env.NODE_ENV);
 
 // webpack中的所有的配置信息都应该写在module.exports中

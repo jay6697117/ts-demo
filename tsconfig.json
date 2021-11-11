@@ -8,7 +8,7 @@
     // 所有严格检查的总开关
     "strict": true,
     // outDir 用来指定编译后文件所在的目录
-    "outDir": "./dist",
+    // "outDir": "./dist", //有webpack不需要
     // 当有错误时不生成编译后的文件
     "noEmitOnError": true
   }
