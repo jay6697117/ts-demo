@@ -11,7 +11,7 @@ console.log(`process.env.NODE_ENV:`, process.env.NODE_ENV);
 module.exports = {
   mode: process.env.NODE_ENV,
   // 指定入口文件
-  entry: './src/index.ts',
+  entry: path.resolve(rootDir, './src/index.ts'),
   // 指定打包文件所在目录
   output: {
     // 指定打包文件的目录
