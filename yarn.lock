@@ -958,6 +958,11 @@
   resolved "https://registry.npmmirror.com/@types/node/download/@types/node-16.11.7.tgz?cache=0&sync_timestamp=1636408815249&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2F%40types%2Fnode%2Fdownload%2F%40types%2Fnode-16.11.7.tgz#36820945061326978c42a01e56b61cd223dfdc42"
   integrity sha512-QB5D2sqfSjCmTuWcBWyJ+/44bcjO7VbjSbOE0ucoVbAsSNQc4Lt6QkgkVXkTDwkL4z/beecZNDvVX15D4P8Jbw==
 
+"@types/node@^16.11.12":
+  version "16.11.12"
+  resolved "https://registry.npmmirror.com/@types/node/download/@types/node-16.11.12.tgz#ac7fb693ac587ee182c3780c26eb65546a1a3c10"
+  integrity sha512-+2Iggwg7PxoO5Kyhvsq9VarmPbIelXP070HMImEpbtGCoyWNINQj4wzjbQCXzdHTRXnqufutJb5KAURZANNBAw==
+
 "@types/retry@^0.12.0":
   version "0.12.1"
   resolved "https://registry.nlark.com/@types/retry/download/@types/retry-0.12.1.tgz?cache=0&sync_timestamp=1629709707692&other_urls=https%3A%2F%2Fregistry.nlark.com%2F%40types%2Fretry%2Fdownload%2F%40types%2Fretry-0.12.1.tgz#d8f1c0d0dc23afad6dc16a9e993a0865774b4065"

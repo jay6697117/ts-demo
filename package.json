@@ -21,6 +21,7 @@
     "webpack-dev-server": "^4.2.1"
   },
   "dependencies": {
+    "@types/node": "^16.11.12",
     "moment": "^2.29.1"
   }
 }
