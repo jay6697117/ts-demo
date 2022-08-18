@@ -74,7 +74,8 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'TS项目',
       filename: 'index.html',
-      template: path.resolve(rootDir, './public/index.html')
+      template: path.resolve(rootDir, './public/index.html'),
+      favicon: path.resolve(rootDir, './public/favicon.ico')
     })
   ],
   // 用来设置引用模块
