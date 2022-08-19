@@ -25,10 +25,40 @@
 // const res = z(); // 不会提示错误
 
 // unknown
-let result: unknown;
+// let result1: unknown;
+// let result2: unknown;
+
 // result = 1;
 // result = 'h';
 // let num: number = result; // 提示 ts(2322)
 // let str: string = result; // 提示 ts(2322)
-let ang: any = result; // 不会提示错误
-let unn: unknown = result; // 不会提示错误
+// let ang: any = result; // 不会提示错误
+// let unn: unknown = result; // 不会提示错误
+// result();//对象的类型为 "unknown"。ts(2571)
+// result.x()//对象的类型为 "unknown"。ts(2571)
+
+// result1 = 123;
+// result2 = 'hello'
+
+// if (typeof result1 === 'number') {
+//   const res1 = result1.toFixed(); // 此处 hover result 提示类型是 number，不会提示错误
+//   console.log('res1:', res1)
+// }
+
+// if (typeof result2 === 'string') {
+//  const res2=  result2.slice(1); // 此处 hover result 提示类型是 string，不会提示错误
+//   console.log('res2:', res2)
+// }
+
+// void
+function foo(): void {
+  // return undefined;
+}
+console.log('foo', foo);
+
+let undeclared: undefined = undefined; // 鸡肋
+let nullable: null = null; // 鸡肋
+let unn: unknown = foo;
+let ang: any = foo;
+console.log('unn', unn)
+console.log('ang', ang)
