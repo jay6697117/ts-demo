@@ -51,14 +51,112 @@
 // }
 
 // void
-function foo(): void {
-  // return undefined;
-}
-console.log('foo', foo);
+// function foo(): void {
+//   // return undefined;
+// }
+// console.log('foo', foo);
 
-let undeclared: undefined = undefined; // 鸡肋
-let nullable: null = null; // 鸡肋
-let unn: unknown = foo;
-let ang: any = foo;
-console.log('unn', unn)
-console.log('ang', ang)
+// let undeclared: undefined = undefined; // 鸡肋
+// let nullable: null = null; // 鸡肋
+// let unn: unknown = foo;
+// let ang: any = foo;
+// console.log('unn', unn)
+// console.log('ang', ang)
+
+// 类型守卫
+// const userInfo: {
+//   id?: number;
+//   name?: null | string;
+// } = { id: 1, name: 'Captain' };
+
+// if (userInfo.id !== undefined) {
+//   // Type Guard
+//   const res = userInfo.id.toFixed(); // id 的类型缩小成 number
+//   console.log('res 0:>> ', res);
+// }
+
+// if (userInfo.name !== undefined && userInfo.name !== null) {
+//   // Type Guard
+//   const res = userInfo.name.toLowerCase(); // name 的类型缩小成 string
+//   console.log('res 1:>> ', res);
+// }
+
+// const res1 = userInfo.id!.toFixed(); // ok，但不建议
+// const res2 = userInfo.name!.toLowerCase(); // ok，但不建议
+// console.log('res1 :>> ', res1);
+// console.log('res2 :>> ', res2);
+
+// const userInfo: {
+//   id?: number;
+//   name?: null | string;
+// } = { id: 1, name: 'Captain' };
+
+// const userInfo: {
+//   id?: number;
+//   name?: null | string;
+// } = { id: undefined, name: undefined };
+
+// const res1 = userInfo.id?.toFixed(); // Optional Chain 可选链
+// const res2 = userInfo.name?.toLowerCase(); // Optional Chain 可选链
+// console.log('res1 :>> ', res1);
+// console.log('res2 :>> ', res2);
+
+// // 空值合并
+// const myName = userInfo.name ?? `my name is ${userInfo.name}`; // 空值合并
+// console.log('myName :>> ', myName);
+
+// never
+// function ThrowError(msg: string): never {
+//   throw new Error(msg);
+// }
+// ThrowError('报错啦111')
+
+// let Unreachable: never = 1; // ts(2322)
+
+// Unreachable = 'string'; // ts(2322)
+
+// Unreachable = true; // ts(2322)
+
+// let Unreachable: never = 1;
+// let num: number = Unreachable; // ok
+// let str: string = Unreachable; // ok
+// let bool: boolean = Unreachable; // ok
+
+// const str: string | never = 'string';
+// console.log('str :>> ', str,typeof str);
+
+// if (typeof str === 'number') {
+//   str.toLowerCase(); // Property 'toLowerCase' does not exist on type 'never'.ts(2339)
+// }
+
+// const props: {
+//   id: number;
+//   name?: never;
+// } = {
+//   id: 1,
+//   name: undefined
+// };
+
+// props.name = null; // ts(2322)) 不能将类型“"xxx"”分配给类型“undefined”。ts(2322)
+// props.name = 'str'; // ts(2322) 不能将类型“"xxx"”分配给类型“undefined”。ts(2322)
+// props.name = 1; // ts(2322) 不能将类型“"xxx"”分配给类型“undefined”。ts(2322)
+
+// declare function create(o: object | null): any;
+// function create(o: object | null): any {
+//   return o;
+// }
+// create({}); // ok
+// create(() => null); // ok
+// create([]); // ok
+// create(2); // ts(2345)
+// create('string'); // ts(2345)
+
+
+// 类型断言（Type Assertion）
+const arrayNumber: number[] = [1, 2, 3, 4];
+console.log('arrayNumber :', arrayNumber);
+// const tempArr = arrayNumber.find(item => item > 2) as number; //3
+const tempArr = <number>arrayNumber.find(item => item > 2); //3
+console.log('tempArr :>> ', tempArr);
+const greaterThan2: number = tempArr ; // 提示 ts(2322)
+console.log('greaterThan2 :>> ', greaterThan2);
