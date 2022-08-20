@@ -151,12 +151,34 @@
 // create(2); // ts(2345)
 // create('string'); // ts(2345)
 
-
 // 类型断言（Type Assertion）
-const arrayNumber: number[] = [1, 2, 3, 4];
-console.log('arrayNumber :', arrayNumber);
-// const tempArr = arrayNumber.find(item => item > 2) as number; //3
-const tempArr = <number>arrayNumber.find(item => item > 2); //3
-console.log('tempArr :>> ', tempArr);
-const greaterThan2: number = tempArr ; // 提示 ts(2322)
-console.log('greaterThan2 :>> ', greaterThan2);
+// const arrayNumber: number[] = [1, 2, 3, 4];
+// console.log('arrayNumber :', arrayNumber);
+// // const tempArr = arrayNumber.find(item => item > 2) as number; //3
+// const tempArr = <number>arrayNumber.find(item => item > 2); //3
+// console.log('tempArr :>> ', tempArr);
+// const greaterThan2: number = tempArr ; // 提示 ts(2322)
+// console.log('greaterThan2 :>> ', greaterThan2);
+
+// /** str 类型是 '"str"' */
+// let str: string = 'str' as const;
+// /** readOnlyArr 类型是 'readonly [0, 1]' */
+// const readOnlyArr: readonly number[] = [0, 1, 2] as const;
+// let a = 111;
+
+let mayNullOrUndefinedOrString: null | undefined | string;
+// const res1 = mayNullOrUndefinedOrString!.toString(); // ok
+// const res2 =  (mayNullOrUndefinedOrString as string).toString(); // ok
+const res3 = mayNullOrUndefinedOrString?.toString(); // ok
+// const res4 =  mayNullOrUndefinedOrString.toString(); // ts(2531)
+// console.log('res1 :>> ', res1);
+// console.log('res2 :>> ', res2);
+console.log('res3 :>> ', res3);
+// console.log('res4 :>> ', res4);
+
+mayNullOrUndefinedOrString = 123 as any as string;
+console.log('mayNullOrUndefinedOrString :', mayNullOrUndefinedOrString, typeof mayNullOrUndefinedOrString);
+if (typeof mayNullOrUndefinedOrString === 'string') {
+  const res5 = mayNullOrUndefinedOrString.toString(); // ok
+  console.log('res5 :>> ', res5);
+}
