@@ -157,5 +157,5 @@
   // str2 = 'hello'; // 不能将类型“"hello"”分配给类型“"this is string"”。ts(2322)
   console.log('str2:', str2);
 }
-
+console.log('测试')
 export default {};
