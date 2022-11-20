@@ -128,27 +128,34 @@
 //   console.log('bool', bool)
 // }
 
+// {
+//   // let str = 'this is string'; // 类型是 string
+//   let str: string = 'this is string'; // 类型是 string
+
+//   // let strFun = (str = 'this is string') => str; // 类型是 (str?: string | undefined) => string;
+//   let strFun: (str?: string | undefined) => string = (str = 'this is string') => {
+//     console.log('str 0:', str);
+//     return str;
+//   }; // 类型是 (str?: string | undefined) => string;
+//   const res = strFun();
+//   console.log('res 1:', res);
+
+//   // const specifiedStr = 'this is string'; // 类型是 'this is string'
+//   const specifiedStr: 'this is string' = 'this is string'; // 类型是 'this is string'
+
+//   // let str2 = specifiedStr; // 类型是 'string'
+//   let str2 = specifiedStr; // 类型是 'string'
+//   // let strFun2 = (str = specifiedStr) => str; // 类型是 (str?: string | undefined) => string;
+//   let strFun2: (str?: string | undefined) => string = (str = specifiedStr) => str; // 类型是 (str?: string |undefined) => string;
+//   const res1 = strFun2();
+//   console.log('res 2:', res1);
+// }
+
 {
-  // let str = 'this is string'; // 类型是 string
-  let str: string = 'this is string'; // 类型是 string
-
-  // let strFun = (str = 'this is string') => str; // 类型是 (str?: string | undefined) => string;
-  let strFun: (str?: string | undefined) => string = (str = 'this is string') => {
-    console.log('str 0:', str);
-    return str;
-  }; // 类型是 (str?: string | undefined) => string;
-  const res = strFun();
-  console.log('res 1:', res);
-
-  // const specifiedStr = 'this is string'; // 类型是 'this is string'
-  const specifiedStr: 'this is string' = 'this is string'; // 类型是 'this is string'
-
-  // let str2 = specifiedStr; // 类型是 'string'
-  let str2: string = specifiedStr; // 类型是 'string'
-  // let strFun2 = (str = specifiedStr) => str; // 类型是 (str?: string | undefined) => string;
-  let strFun2: (str?: string | undefined) => string = (str = specifiedStr) => str; // 类型是 (str?: string |undefined) => string;
-  const res1 = strFun2();
-  console.log('res 2:', res1);
+  const specifiedStr: 'this is string' = 'this is string'; // 类型是 '"this is string"'
+  let str2 = specifiedStr; // 即便使用 let 定义，类型是 'this is string'
+  // str2 = 'hello'; // 不能将类型“"hello"”分配给类型“"this is string"”。ts(2322)
+  console.log('str2:', str2);
 }
 
 export default {};
